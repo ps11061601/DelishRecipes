@@ -10,26 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_145817) do
+ActiveRecord::Schema.define(version: 2021_04_18_035601) do
 
   create_table "recipes", force: :cascade do |t|
-    t.integer "RecipeID"
-    t.string "RName"
-    t.string "RCategory"
-    t.string "RCousine"
-    t.string "RDescription"
-    t.string "IngredientID"
+    t.integer "recipeID"
+    t.string "recipeName"
+    t.string "recipeCousine"
+    t.string "recipeType"
+    t.string "recipeDescription"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "UserID"
-    t.string "First_Name"
-    t.string "Last_Name"
-    t.string "Email"
-    t.string "Password"
-    t.string "UserType"
+    t.integer "userID"
+    t.string "firstName"
+    t.string "lastName"
+    t.string "email"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
