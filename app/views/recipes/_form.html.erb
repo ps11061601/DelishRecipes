@@ -11,32 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :recipeID %>
-    <%= form.number_field :recipeID %>
+  <div class="field form-group">
+    <%#= form.label :recipeID %>
+    <%= form.number_field :recipeID , class:"form-control", placeholder: "Recipe ID" %>
+  </div>
+  </br>
+
+  <div class="field form-group">
+    <%#= form.label :recipeName %>
+    <%= form.text_field :recipeName, class:"form-control" , placeholder: "Recipe Name"%>
+  </div>
+  </br>
+
+  <div class="field form-group">
+    <%#= form.label :recipeCousine %>
+    <%= form.text_field :recipeCousine, class:"form-control", placeholder: "Cousine" %>
+  </div>
+  </br>
+
+  <div class="field form-group">
+    <%#= form.label :recipeType %>
+    <%= form.text_field :recipeType, class:"form-control", placeholder: "Type" %>
+  </div>
+  </br>
+
+  <div class="field form-group">
+    <%#= form.label :recipeDescription %>
+    <%= form.text_field :recipeDescription, class:"form-control", placeholder: "Description" %>
+  </div>
+  </br>
+  <div class="field form-group">
+    <%#= form.label :recipeDescription %>
+    <%= form.number_field :user_id, id: :recipe_user_id, class:"form-control", value: current_user.id, type: :hidden %>
   </div>
 
-  <div class="field">
-    <%= form.label :recipeName %>
-    <%= form.text_field :recipeName %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recipeCousine %>
-    <%= form.text_field :recipeCousine %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recipeType %>
-    <%= form.text_field :recipeType %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recipeDescription %>
-    <%= form.text_field :recipeDescription %>
-  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit  class:"btn btn-secondary"%>
   </div>
 <% end %>

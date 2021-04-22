@@ -1,15 +1,15 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
-<h1>Recipes</h1>
+<h1>List of Recipes</h1>
 
-<table>
-  <thead>
+<table class="table table-hover table-striped table-bordered">
+  <thead class="table-dark">
     <tr>
-      <th>Recipeid</th>
-      <th>Recipename</th>
-      <th>Recipecousine</th>
-      <th>Recipetype</th>
-      <th>Recipedescription</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Cousine</th>
+      <th>Type</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to 'New Recipe', new_recipe_path, class: "btn btn-secondary" %>
